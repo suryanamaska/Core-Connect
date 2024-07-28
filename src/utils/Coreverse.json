@@ -1,0 +1,758 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_question_id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "_selected_option",
+        "type": "bool"
+      }
+    ],
+    "name": "calculate_result_of_question",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_post_url",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_caption",
+        "type": "string"
+      }
+    ],
+    "name": "create_post",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_question",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_bet_cost_yes",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_bet_cost_no",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "_end_time",
+        "type": "string"
+      }
+    ],
+    "name": "create_question",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "gen_image",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_post_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "like_post",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_question_id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "_selected_option",
+        "type": "bool"
+      }
+    ],
+    "name": "place_bet_question",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_username",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_profile_url",
+        "type": "string"
+      },
+      {
+        "internalType": "string[]",
+        "name": "_interests",
+        "type": "string[]"
+      }
+    ],
+    "name": "register_user",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_post_index",
+        "type": "uint256"
+      }
+    ],
+    "name": "save_post",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_receiver_address",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_no_of_tokens",
+        "type": "uint256"
+      }
+    ],
+    "name": "tip_user",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "get_all_questions",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "question_id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "question",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bet_cost_yes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bet_cost_no",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "total_yes_bets",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "total_no_bets",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "end_time",
+            "type": "string"
+          },
+          {
+            "internalType": "address[]",
+            "name": "yes_bets",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address[]",
+            "name": "no_bets",
+            "type": "address[]"
+          },
+          {
+            "internalType": "bool",
+            "name": "answered",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "status",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct Coreverse.Question[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "get_completed_questions",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "question_id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "question",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bet_cost_yes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bet_cost_no",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "total_yes_bets",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "total_no_bets",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "end_time",
+            "type": "string"
+          },
+          {
+            "internalType": "address[]",
+            "name": "yes_bets",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address[]",
+            "name": "no_bets",
+            "type": "address[]"
+          },
+          {
+            "internalType": "bool",
+            "name": "answered",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "status",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct Coreverse.Question[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "get_ongoing_questions",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "question_id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "question",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bet_cost_yes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bet_cost_no",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "total_yes_bets",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "total_no_bets",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "end_time",
+            "type": "string"
+          },
+          {
+            "internalType": "address[]",
+            "name": "yes_bets",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address[]",
+            "name": "no_bets",
+            "type": "address[]"
+          },
+          {
+            "internalType": "bool",
+            "name": "answered",
+            "type": "bool"
+          },
+          {
+            "internalType": "string",
+            "name": "status",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct Coreverse.Question[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user_address",
+        "type": "address"
+      }
+    ],
+    "name": "get_user_profile",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "username",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "profile_url",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "interests",
+            "type": "string[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokens",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "posts",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "saved_posts",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tips",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "won_tokens",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Coreverse.User",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user_address",
+        "type": "address"
+      }
+    ],
+    "name": "get_user_questions",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "question_id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "question",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "status",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bet_cost_yes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bet_cost_no",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "chose_bet",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct Coreverse.User_Questions[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user_address",
+        "type": "address"
+      }
+    ],
+    "name": "is_user_registered",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "posts",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "caption",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "post_url",
+        "type": "string"
+      },
+      {
+        "internalType": "uint32",
+        "name": "likes",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tips",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "questions",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "question_id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "question",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "bet_cost_yes",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "bet_cost_no",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "total_yes_bets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "total_no_bets",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "end_time",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "answered",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "status",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "userQuestions",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "question_id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "question",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "bet_cost_yes",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "bet_cost_no",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "chose_bet",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "users",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "username",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "profile_url",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokens",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tips",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "won_tokens",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "view_all_posts",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "caption",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "post_url",
+            "type": "string"
+          },
+          {
+            "internalType": "uint32",
+            "name": "likes",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tips",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Coreverse.Post[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
